@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#14274f"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h10"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h30"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h50"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h70"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h90"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Names"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_margin="8dp"
+        android:layout_marginRight="15dp"
+
+        app:layout_constraintBottom_toTopOf="@id/gl_h10"
+        app:layout_constraintEnd_toStartOf="@id/btn_support"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_support"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/round_support_agent_24"
+        android:background="@null"
+        android:padding="10dp"
+        android:contentDescription="Customer Support"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gl_h10"
+        app:layout_constraintStart_toEndOf="@id/gl_v55"
+        app:layout_constraintEnd_toStartOf="@id/btn_settings"/>
+
+    <ImageButton
+        android:id="@+id/btn_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_settings_24"
+        android:background="@null"
+        android:padding="10dp"
+        android:contentDescription="Settings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gl_h10"
+        app:layout_constraintStart_toEndOf="@id/btn_support"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/user_img"
+        android:src="@drawable/user_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/gl_v55"
+        app:layout_constraintTop_toBottomOf="@id/gl_h10"
+        app:layout_constraintBottom_toTopOf="@id/gl_h30"/>
+
+    <Button
+        android:id="@+id/btn_Edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit profile"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:background="@drawable/round_b"
+        app:layout_constraintTop_toBottomOf="@id/gl_h10"
+        app:layout_constraintBottom_toTopOf="@id/btn_logout"
+        app:layout_constraintStart_toEndOf="@id/user_img"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:background="@drawable/round_b"
+        app:layout_constraintTop_toBottomOf="@id/btn_Edit"
+        app:layout_constraintBottom_toTopOf="@id/gl_h30"
+        app:layout_constraintStart_toEndOf="@id/user_img"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_address"
+        android:text="Address   >>"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:background="#14274f"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_h30"
+        app:layout_constraintBottom_toTopOf="@id/btn_messages"/>
+
+    <Button
+        android:id="@+id/btn_messages"
+        android:text="Messages   >>"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:background="#14274f"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_address"
+        app:layout_constraintBottom_toTopOf="@id/gl_h50"/>
+
+    <Button
+        android:id="@+id/btn_orders"
+        android:text="Orders   >>"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:background="#14274f"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_h50"
+        app:layout_constraintBottom_toTopOf="@id/btn_reviews"/>
+
+    <Button
+        android:id="@+id/btn_reviews"
+        android:text="Reviews   >>"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:background="#14274f"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_orders"
+        app:layout_constraintBottom_toTopOf="@id/gl_h70"/>
+
+    <Button
+        android:id="@+id/btn_coupon"
+        android:text="Coupons &amp; Offers   >>"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:background="#14274f"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_h70"
+        app:layout_constraintBottom_toTopOf="@id/btn_crbal"/>
+    <Button
+        android:id="@+id/btn_crbal"
+        android:text="Credit Balance   >>"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:background="#14274f"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_coupon"
+        app:layout_constraintBottom_toTopOf="@id/gl_h90"/>
+
+    <TextView
+        android:id="@+id/tv_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:layout_margin="8dp"
+        android:layout_marginRight="15dp"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/gl_h90"
+        app:layout_constraintEnd_toStartOf="@id/tv_cart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:layout_margin="8dp"
+        android:layout_marginRight="15dp"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/gl_h90"
+        app:layout_constraintEnd_toStartOf="@id/tv_logo"
+        app:layout_constraintStart_toEndOf="@id/tv_cart"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cart"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:layout_margin="8dp"
+        android:layout_marginRight="15dp"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/gl_h90"
+        app:layout_constraintEnd_toStartOf="@id/tv_profile"
+        app:layout_constraintStart_toEndOf="@id/tv_home"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logo"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:layout_margin="8dp"
+        android:layout_marginRight="15dp"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/gl_h90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_profile"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
