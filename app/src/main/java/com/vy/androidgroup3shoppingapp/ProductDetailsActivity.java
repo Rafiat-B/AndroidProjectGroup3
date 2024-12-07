@@ -53,7 +53,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         productName.setText(name);
         productDescription.setText(description);
         productPrice.setText(price);
-        Glide.with(this).load(imageResId).into(productImage);
+//        Glide.with(this).load(imageResId).into(productImage);
         productSize.setText(size);
         productBrand.setText(brand);
     }
