@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -138,6 +139,11 @@ public class OrderActivity extends AppCompatActivity {
             // Setting data
             orderName.setText(order.getId());
             orderPrice.setText(order.getPrice());
+
+            // Ensure the view has no parent
+            if (orderView.getParent() != null) {
+                ((ViewGroup) orderView.getParent()).removeView(orderView);
+            }
 
             // Add to parent container
             orderContainer.addView(orderView);
